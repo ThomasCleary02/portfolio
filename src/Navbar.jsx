@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
@@ -14,11 +15,10 @@ const Navbar = () => {
   const navItems = [
     { id: 1, text: 'Home' },
     { id: 2, text: 'About' },
-    { id: 3, text: 'Contact' },
   ];
 
   return (
-    <div className='bg-white flex justify-between shadow items-center h-24 mx-auto px-4 text-black'>
+    <div className='bg-white flex justify-between shadow items-center h-16 mx-auto px-4 text-black fixed top-0 left-0 right-0 z-0'>
 
       {/* Logo */}
       <h1 className='w-full pl-8 text-3xl font-bold text-black'>Thomas Cleary</h1>
@@ -62,7 +62,9 @@ const Navbar = () => {
             {item.text}
           </li>
         ))}
+
       </ul>
+
     </div>
   );
 };
