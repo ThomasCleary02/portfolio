@@ -34,7 +34,7 @@ const Projects = () => {
                 <ul className="list-disc list-inside">
                     <li>Contributed to the current version of the SRA International Careers site and coordinated with UI/UX Lead in developing front-end interface using Angular.</li>
                     <li>Worked with Angular, TypeScript, HTML, CSS, and Bootstrap.</li>
-                    <li><a className="text-blue" href="https://careercenter.srainternational.org/index.php ">https://careercenter.srainternational.org/index.php</a></li>
+                    <li><a className="text-blue hover:text-blue-700 hover:font-bold" href="https://careercenter.srainternational.org/index.php ">https://careercenter.srainternational.org/index.php</a></li>
                 </ul>
 
             </div>

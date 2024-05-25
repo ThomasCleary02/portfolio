@@ -4,7 +4,7 @@ const Skills = () => {
     return (
         <div>
             <h3 className="text-xl font-bold mb-2">Skills</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
                 <div>
                     <ul>
                         <li>Python</li>
