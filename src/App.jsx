@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Hero from './components/Hero.jsx';
-import AboutPage from './components/AboutPage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
 import Footer from './components/Footer.jsx';
 import Background from './components/Background.jsx'
 
