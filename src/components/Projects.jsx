@@ -65,6 +65,13 @@ const Projects = () => {
                     description="Contributed to the current version of the SRA International Careers site and coordinated with UI/UX Lead in developing front-end interface using Angular. Worked with Angular, TypeScript, HTML, CSS, and Bootstrap."
                     link="https://careercenter.srainternational.org/index.php"
                 />
+                <ProjectCard
+                    title="Halluminate Website"
+                    organization="Halluminate"
+                    location="Remote"
+                    date="Jun 2024 - Jul 2024"
+                    description="I collaborated remotely with a team to design and develop Halluminate’s website. Using Figma, I created and presented intuitive design prototypes, which we then brought to life using React and Tailwind CSS through collaborative efforts on GitHub. This project honed my UI/UX design skills and demonstrated my ability to effectively contribute to remote, agile development teams."
+                />
             </div>
         </div>
     );
