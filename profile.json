@@ -1,0 +1,82 @@
+{
+    "schools": [
+        {
+            "logo": "/shepherd-logo.png",
+            "alt": "Shepherd University",
+            "school": "Shepherd University",
+            "date": "Expected: May 2025",
+            "description": "I'm currently pursuing a Bachelor of Science in Computer and Information Technology. My coursework includes web development, databases, software engineering, and more. I have engaged in various projects and collaborative efforts, enhancing my practical skills and theoretical knowledge."
+        },
+        {
+            "logo": "/hcc-logo.png",
+            "alt": "Hagerstown Community College",
+            "school": "Hagerstown Community College",
+            "date": "Sep 2018 - May 2020",
+            "description": "I participated in the Early College Access Program where I began my college education while still in high school. This experience provided a strong foundation in my academic journey and prepared me for further studies in computer and information technology."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Halluminate Website",
+            "organization": "Halluminate",
+            "location": "Remote",
+            "date": "Jun 2024 - Jul 2024",
+            "description": "I collaborated remotely with a team to design and develop Halluminate’s website. Using Figma, I created and presented intuitive design prototypes, which we then brought to life using React and Tailwind CSS through collaborative efforts on GitHub. This project honed my UI/UX design skills and demonstrated my ability to effectively contribute to remote, agile development teams.",
+            "link": "https://halluminate.ai/"
+        },
+        {
+            "title": "Capstone Research Project",
+            "organization": "Shepherd University",
+            "location": "Shepherdstown, WV",
+            "date": "Jan 2024 - Apr 2024",
+            "description": "Led the deployment of a database for a web application prototype showcasing products from Amazon. Engineered a Python web scraper for efficient data collection from Amazon, optimizing the prototype's content accuracy. Collaborated through GitHub in a MERN stack project to develop a responsive, visually appealing prototype website. Documented development processes and research findings, enhancing the project's academic value and future adaptability.",
+            "link": ""
+        },
+        {
+            "title": "SRA International Career Center",
+            "organization": "Lion Flower, LLC",
+            "location": "Hagerstown, MD",
+            "date": "May 2019 - Aug 2019",
+            "description": "Contributed to the current version of the SRA International Careers site and coordinated with UI/UX Lead in developing front-end interface using Angular. Worked with Angular, TypeScript, HTML, CSS, and Bootstrap.",
+            "link": "https://careercenter.srainternational.org/index.php"
+        }
+    ],
+    "skills": [
+        {
+            "title": "React.js",
+            "imgpath": "./react-svgrepo-com.png"
+        },
+        {
+            "title": "TailwindCSS",
+            "imgpath": "./tailwind-svgrepo-com.png"
+        },
+        {
+            "title": "Figma",
+            "imgpath": "./figma-svgrepo-com.png"
+        },
+        {
+            "title": "Python",
+            "imgpath": "./python-svgrepo-com.png"
+        },
+        {
+            "title": "Java",
+            "imgpath": "./java-svgrepo-com.png"
+        },
+        {
+            "title": "MongoDB",
+            "imgpath": "./mongodb-svgrepo-com.png"
+        },
+        {
+            "title": "SQL",
+            "imgpath": "./sql-svgrepo-com.png"
+        },
+        {
+            "title": "Git",
+            "imgpath": "./git-pull-request-svgrepo-com.png"
+        },
+        {
+            "title": "HTML/CSS",
+            "imgpath": "./html-tag-svgrepo-com.png"
+        }
+    ] 
+}
