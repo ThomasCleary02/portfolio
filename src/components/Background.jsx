@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '/Background.jpg';
+import background from '/background.jpg';
 
 const Background = ({ children }) => {
 
@@ -14,14 +14,6 @@ const Background = ({ children }) => {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     zIndex: 0
-                }}
-            />
-
-            {/* Overlay to Dim the Image */}
-            <div 
-                className="fixed top-0 left-0 w-full h-full bg-black opacity-50"
-                style={{
-                    zIndex: 1
                 }}
             />
 
