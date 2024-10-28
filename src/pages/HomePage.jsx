@@ -5,6 +5,19 @@ import Projects from '../components/Projects.jsx';
 import Skills from '../components/Skills.jsx';
 import Contact from '../components/Contact.jsx';
 
+
+const skills = [
+    { title: 'React.js', imgpath: '/react-svgrepo-com.png'},
+    { title: 'TailwindCSS', imgpath: './tailwind-svgrepo-com.png'},
+    { title: 'Figma', imgpath: './figma-svgrepo-com.png'},
+    { title: 'Python', imgpath: './python-svgrepo-com.png' },
+    { title: 'Java', imgpath: './java-svgrepo-com.png' },
+    { title: 'MongoDB', imgpath: './mongodb-svgrepo-com.png' },
+    { title: 'SQL', imgpath: './sql-svgrepo-com.png' },
+    { title: 'Git', imgpath: './git-pull-request-svgrepo-com.png' },
+    { title: 'HTML/CSS', imgpath: './html-tag-svgrepo-com.png' }
+];
+
 const About = ({ aboutMeRef }) => {
 
     return (
@@ -24,7 +37,7 @@ const About = ({ aboutMeRef }) => {
             <Projects />
 
             {/* Skills */}
-            <Skills />
+            <Skills skills={skills}/>
 
             </div>
         </div>
