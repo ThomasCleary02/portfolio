@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './SectionHeader'
+import profile from '../../profile.json'
+
 
 const Skill = ({ imgpath, title }) => {
     return (
@@ -13,17 +15,8 @@ const Skill = ({ imgpath, title }) => {
 };
 
 const Skills = () => {
-    const skills = [
-        { title: 'React.js', imgpath: '/react-svgrepo-com.png'},
-        { title: 'TailwindCSS', imgpath: './tailwind-svgrepo-com.png'},
-        { title: 'Figma', imgpath: './figma-svgrepo-com.png'},
-        { title: 'Python', imgpath: './python-svgrepo-com.png' },
-        { title: 'Java', imgpath: './java-svgrepo-com.png' },
-        { title: 'MongoDB', imgpath: './mongodb-svgrepo-com.png' },
-        { title: 'SQL', imgpath: './sql-svgrepo-com.png' },
-        { title: 'Git', imgpath: './git-pull-request-svgrepo-com.png' },
-        { title: 'HTML/CSS', imgpath: './html-tag-svgrepo-com.png' }
-    ];
+
+    const { skills } = profile;
 
     return (
         <div className="mb-8">
