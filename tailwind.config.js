@@ -6,17 +6,21 @@ export default {
   ],
   theme: {
     extend: {
-      extend: {
-        textShadow: {
-          sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
-          DEFAULT: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-          lg: '3px 3px 6px rgba(0, 0, 0, 0.5)',
-        },
-        opacity: {
-          '15' : '0.15',
-          '25' : '0.25',
-          '50' : '0.50',
-        },
+      colors: {
+        primaryBlue: '#0348A5',
+        lightBlue: '#1DADF8',
+        darkGray: '#515151',
+        backgroundLight: '#EAEBE6',
+      },
+      textShadow: {
+        sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+        DEFAULT: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        lg: '3px 3px 6px rgba(0, 0, 0, 0.5)',
+      },
+      opacity: {
+        '15' : '0.15',
+        '25' : '0.25',
+        '50' : '0.50',
       },
     },
   },

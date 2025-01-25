@@ -1,40 +1,34 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-const Hero = ({ aboutMeRef }) => {
-    const scrollToAboutMe = () => {
-        aboutMeRef.current?.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start' 
-        });
-    };
+const Hero = () => {
+  return (
+    <section className="bg-backgroundLight h-screen flex items-center justify-center px-20">
+      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-12">
+      {/* Left Content */}
+        <div className="lg:w-2/3 text-left lg:text-left">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primaryBlue mb-4">
+            Hey, I'm Thomas!
+          </h1>
+          <p className="text-lg lg:text-xl text-darkGray">
+            A full-stack{' '}
+            <span className="text-primaryBlue font-semibold">developer</span>{' '}
+            crafting dynamic, responsive, and{' '}
+            <span className="text-primaryBlue font-semibold">user-focused</span>{' '}
+            web applications.
+          </p>
+        </div>
 
-    return (
-        <motion.div
-            className="h-screen flex justify-center items-center text-black text-shadow-lg hero-container"
-            initial={{ scale: 0.5 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-        >
-            <div className="text-center">
-                <h1 className="text-6xl font-bold mb-4">
-                    Hey, I'm Thomas Cleary!
-                </h1>
-                <p className="text-lg mb-8 font-semibold">
-                    A passionate developer ready to make an impact.
-                </p>
-                <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={scrollToAboutMe}
-                    className="font-bold border-solid border-black border-2 text-black py-2 px-4 rounded-lg hover:border-transparent hover:text-white hover:bg-black"
-                >
-                    Learn More About Me
-                </motion.button>
-            </div>
-        </motion.div>
-    );
+        {/* Right Image */}
+        <div className="lg:w-1/3 flex">
+          <img
+            src="/avatar.png"
+            alt="Thomas"
+            className="rounded-lg max-w-full ml-auto"
+          />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;

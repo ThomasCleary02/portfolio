@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './SectionHeader'
-import profile from '../../profile.json'
+import profile from '../../../profile.json'
 
 
 const Skill = ({ imgpath, title }) => {
