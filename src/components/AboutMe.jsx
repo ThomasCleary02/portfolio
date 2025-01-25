@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMeSection = () => {
   return (
-    <section className="bg-backgroundLight h-screen flex items-center justify-center px-20">
+    <section className="bg-backgroundLight min-h-screen flex items-center justify-center px-20">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-12">
         {/* Right Image */}
         <div className="lg:w-1/3 flex">
