@@ -2,16 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion'
 import { effects } from '../styles/animationVariants.js'
 
-export default function App() {
+export default function Footer() {
   return (
-    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-800 dark:text-neutral-200">
+    <footer className="bg-primaryBlue text-center text-backgroundLight">
       <div className="container mx-auto px-4 pt-6 pb-4">
         <div className="flex justify-center items-center space-x-6 md:space-x-8 lg:space-x-10">
           {/* LinkedIn Logo */}
           <motion.a 
             whileHover="iconHover"
             variants={effects}
-            className="text-neutral-600 hover:text-blue-500 dark:text-neutral-200 transition-colors duration-300"
+            className="text-backgroundLight hover:text-lightBlue transition-colors duration-300"
             href="https://www.linkedin.com/in/t-cleary/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export default function App() {
           <motion.a
             whileHover="iconHover"
             variants={effects}
-            className="text-neutral-600 hover:text-blue-500 dark:text-neutral-200 transition-colors duration-300"
+            className="text-backgroundLight hover:text-lightBlue transition-colors duration-300"
             href="mailto:thomcleary15@gmail.com">
             <svg 
               xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ export default function App() {
           <motion.a 
             whileHover="iconHover"
             variants={effects}
-            className="text-neutral-600 hover:text-blue-500 dark:text-neutral-200 transition-colors duration-300"
+            className="text-backgroundLight hover:text-lightBlue transition-colors duration-300"
             href="https://profile.indeed.com/p/thomasc-jjm1y5b">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export default function App() {
           <motion.a 
             whileHover="iconHover"
             variants={effects}
-            className="text-neutral-600 hover:text-blue-500 dark:text-neutral-200 transition-colors duration-300"
+            className="text-backgroundLight hover:text-lightBlue transition-colors duration-300"
             href="https://github.com/ThomasCleary02">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,11 +66,11 @@ export default function App() {
       </div>
 
       {/* Copyright section */}
-      <div className="bg-neutral-200 p-4 text-center text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+      <div className="bg-primaryBlue p-4 text-center text-backgroundLight">
         © {new Date().getFullYear()} Copyright: 
   
         <a
-          className="ml-1 text-neutral-800 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-300 transition-colors duration-300"
+          className="ml-1 text-backgroundLight hover:text-lightBlue transition-colors duration-300"
           href="https://www.linkedin.com/in/t-cleary/"
         >
           Thomas Cleary

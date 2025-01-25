@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './SectionHeader';
-import profile from '../../profile.json'
+import profile from '../../../profile.json'
 
 const EducationCard = ({ logo, alt, school, date, description }) => {
     const [isExpanded, setIsExpanded] = useState(false);

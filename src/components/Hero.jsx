@@ -2,10 +2,10 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="bg-backgroundLight h-screen flex items-center justify-center">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between p-20">
-        {/* Left Content */}
-        <div className="lg:w-2/3 text-center lg:text-left px-20 py-20">
+    <section className="bg-backgroundLight h-screen flex items-center justify-center px-20">
+      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-12">
+      {/* Left Content */}
+        <div className="lg:w-2/3 text-left lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-primaryBlue mb-4">
             Hey, I'm Thomas!
           </h1>
@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
 
         {/* Right Image */}
-        <div className="lg:w-1/3 px-20 py-20">
+        <div className="lg:w-1/3 flex">
           <img
             src="/avatar.png"
             alt="Thomas"
