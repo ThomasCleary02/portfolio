@@ -1,4 +1,5 @@
 import React from 'react';
+import RouteButton from './RouteButton';
 
 const Hero = () => {
   return (
@@ -16,6 +17,12 @@ const Hero = () => {
             <span className="text-primaryBlue font-semibold">user-focused</span>{' '}
             web applications.
           </p>
+          <div className="mt-6">
+            <RouteButton 
+              text="Check Out My Projects!" 
+              route="/projects"
+            />
+        </div>
         </div>
 
         {/* Right Image */}
