@@ -1,6 +1,13 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
+      {
+        "source": "/api/(.*)", 
+        "destination": "https://projects-database-d25a17e83152.herokuapp.com/api/$1"
+      },
+      { 
+        "source": "/(.*)", 
+        "destination": "/" 
+      }
     ]
   }
   
