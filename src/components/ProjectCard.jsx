@@ -1,33 +1,64 @@
+import React from 'react';
+
+export const ProjectPlaceholder = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 400 300" 
+    className="w-full h-full text-gray-200"
+    fill="currentColor"
+  >
+    <rect width="100%" height="100%" fill="currentColor" />
+    <text 
+      x="50%" 
+      y="50%" 
+      dominantBaseline="middle" 
+      textAnchor="middle" 
+      fill="gray" 
+      fontSize="24"
+    >
+      No Image
+    </text>
+  </svg>
+);
+
 const ProjectCard = ({ project }) => {
     const technologies = project.technologies || [];
   
     return (
       <div className="border rounded-xl shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full">
-        {/* Project Image - Now more prominent */}
-        {project.image_url && (
-          <div className="relative overflow-hidden rounded-t-xl">
-            <img 
-              src={project.image_url} 
-              alt={project.title} 
-              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+        {/* Project Image Container */}
+        <div className="h-40 flex items-center justify-center p-4">
+          <div className="w-full h-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden">
+            {project.image_url ? (
+              <img 
+                src={project.image_url} 
+                alt={project.title} 
+                className="w-full h-full object-contain"
+                style={{ 
+                  maxWidth: '100%', 
+                  maxHeight: '100%' 
+                }}
+              />
+            ) : (
+              <ProjectPlaceholder />
+            )}
           </div>
-        )}
+        </div>
   
         {/* Content Container */}
         <div className="p-4 flex flex-col flex-grow">
           {/* Project Header */}
-          <div className="mb-4">
+          <div className="mb-2">
             <h2 className="text-xl font-semibold">{project.title}</h2>
             {project.affiliation && (
               <p className={`
                 text-xs font-medium mt-1
                 ${project.affiliation === 'professional' 
-                  ? 'text-blue-800' 
-                  : 'text-green-800'
+                  ? 'text-primaryBlue' 
+                  : 'text-primaryBlue'
                 }
               `}>
-                {project.affiliation.charAt(0).toUpperCase() + project.affiliation.slice(1)} Project
+                {project.affiliation.charAt(0).toUpperCase() + project.affiliation.slice(1)}
               </p>
             )}
           </div>
@@ -40,7 +71,7 @@ const ProjectCard = ({ project }) => {
             {technologies.map((tech) => (
               <span 
                 key={tech} 
-                className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs"
+                className="bg-lightBlue text-white px-2 py-1 rounded-full text-xs"
               >
                 {tech}
               </span>
@@ -54,7 +85,7 @@ const ProjectCard = ({ project }) => {
                 href={project.live_demo_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700 transition-colors flex items-center"
+                className="text-primaryBlue hover:text-lightBlue transition-colors flex items-center"
               >
                 <svg 
                   className="w-5 h-5 mr-2" 
