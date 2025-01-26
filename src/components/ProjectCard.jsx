@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
       <div className="border rounded-xl shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full">
         {/* Project Image Container */}
         <div className="h-40 flex items-center justify-center p-4">
-          <div className="w-full h-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center bg-white rounded-xl overflow-hidden">
             {project.image_url ? (
               <img 
                 src={project.image_url} 
