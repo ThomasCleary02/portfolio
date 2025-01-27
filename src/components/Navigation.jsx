@@ -74,6 +74,13 @@ const Navigation = () => {
                 Projects
               </Link>
               <Link 
+                to="/blog" 
+                className="block px-4 py-2 text-darkGray hover:bg-gray-100 hover:text-primaryBlue"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog Posts
+              </Link>
+              <Link 
                 to="/resume" 
                 className="block px-4 py-2 text-darkGray hover:bg-gray-100 hover:text-primaryBlue"
                 onClick={() => setIsOpen(false)}

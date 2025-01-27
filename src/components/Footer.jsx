@@ -4,7 +4,7 @@ import { effects } from '../styles/animationVariants.js'
 
 export default function Footer() {
   return (
-    <footer className="bg-primaryBlue text-center text-backgroundLight">
+    <footer className="bg-primaryBlue text-center text-backgroundLight mt-auto">
       <div className="container mx-auto px-4 pt-6 pb-4">
         <div className="flex justify-center items-center space-x-6 md:space-x-8 lg:space-x-10">
           {/* LinkedIn Logo */}
