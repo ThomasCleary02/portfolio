@@ -11,7 +11,7 @@ export default {
         lightBlue: 'rgb(29 173 248 / <alpha-value>)', // #1DADF8
         darkGray: 'rgb(81 81 81 / <alpha-value>)', // #515151
         lightGray: 'rgb(217 217 217 / <alpha-value>)', // #D9D9D9
-        backgroundLight: 'rgb(234 235 230 / <alpha-value>)', // #EAEBE6
+        backgroundLight: 'rgb(240 240 240 / <alpha-value>)', // #F0F0F0
       },
       fontFamily: {
         'sans': ['Nunito', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
