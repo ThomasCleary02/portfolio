@@ -3,7 +3,7 @@ import FilterPills from "../components/FilterPills";
 import ProjectList from "../components/ProjectList";
 
 const ProjectsPage = () => {
-    const [activeFilter, setActiveFilter] = useState("All");
+    const [activeFilter, setActiveFilter] = useState("Professional");
   
     return (
       <div className="max-w-6xl mx-auto px-4 py-24">
