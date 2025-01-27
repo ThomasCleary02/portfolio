@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion'
+import { effects } from '../styles/animationVariants.js'
 
 const RouteButton = ({ 
   text, 
@@ -24,26 +26,25 @@ const RouteButton = ({
   };
 
   return (
-    <button
+    <motion.button
       onClick={handleClick}
+      variants={effects}
+      whileHover="buttonHover"
       className={`
         px-4 py-2
         font-bold
         rounded-xl
         bg-lightBlue 
         text-white 
-        transition-all 
-        duration-300 
         border 
-        border-lightBlue
-        hover:bg-transparent 
-        hover:text-lightBlue 
+        hover:bg-primaryBlue 
+        hover:shadow-md
         focus:outline-none 
         ${className}
       `}
     >
       {text}
-    </button>
+    </motion.button>
   );
 };
 

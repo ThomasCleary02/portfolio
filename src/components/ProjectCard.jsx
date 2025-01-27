@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion'
+import { effects } from '../styles/animationVariants.js'
 
 export const ProjectPlaceholder = () => (
   <svg 
@@ -25,7 +27,10 @@ const ProjectCard = ({ project }) => {
     const technologies = project.technologies || [];
   
     return (
-      <div className="border rounded-xl shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full">
+      <motion.div 
+        variants={effects}
+        whileHover="cardHover"
+        className="border rounded-xl shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full">
         {/* Project Image Container */}
         <div className="h-40 flex items-center justify-center p-4">
           <div className="w-full h-full flex items-center justify-center bg-white rounded-xl overflow-hidden">
@@ -118,7 +123,7 @@ const ProjectCard = ({ project }) => {
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
 
