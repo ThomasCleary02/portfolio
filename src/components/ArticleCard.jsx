@@ -25,13 +25,13 @@ const ArticleCard = ({ article }) => {
     >
       {/* Article Image Container */}
       <div className="h-40 flex items-center justify-center p-4">
-        <div className="w-full h-full flex items-center justify-center bg-white rounded-xl overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center bg-white rounded-lg overflow-hidden">
           {article.image_url ? (
             <img
               src={article.image_url}
               alt={article.title}
-              className="w-full h-full object-contain"
-              style={{ maxWidth: '100%', maxHeight: '100%' }}
+              className="w-full h-full object-cover"
+              style={{ maxWidth: '150%', maxHeight: '150%' }}
             />
           ) : (
             <ArticlePlaceholder />
