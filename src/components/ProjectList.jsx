@@ -7,7 +7,7 @@ const ProjectList = ({ activeFilter }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const CACHE_EXPIRATION_TIME = 60 * 60 * 1000; // 1 hour
+  const CACHE_EXPIRATION_TIME = 24 * 60 * 60 * 1000;
 
   useEffect(() => {
     const fetchProjects = async () => {
