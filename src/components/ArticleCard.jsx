@@ -18,10 +18,13 @@ export const ArticlePlaceholder = () => (
 
 const ArticleCard = ({ article }) => {
   return (
-    <motion.div
+    <motion.a
       variants={effects}
       whileHover="cardHover"
       className="border rounded-xl shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full"
+      href={article.url}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {/* Article Image Container */}
       <div className="h-40 flex items-center justify-center p-4">
@@ -50,24 +53,12 @@ const ArticleCard = ({ article }) => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-600 mb-4 text-sm flex-grow">{article.top_highlight}</p>
+        <p className="text-gray-600 text-sm flex-grow">{article.top_highlight}</p>
 
-        {/* Links */}
-        <div className="flex space-x-4 mt-auto">
-          <a
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primaryBlue hover:text-lightBlue transition-colors flex items-center"
-          >
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" strokeWidth="0">
-              <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-            Read Full Article
-          </a>
-        </div>
+        {/* Published Date */}
+        <p className="text-xs text-gray-500 self-start">{article.published_date}</p>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 
