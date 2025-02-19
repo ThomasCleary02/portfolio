@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
-import Error from "./Error";
 
 const ArticleList = () => {
   const [articles, setArticles] = useState([]);
@@ -16,48 +15,32 @@ const ArticleList = () => {
         const cacheTimestamp = localStorage.getItem("cacheTimestamp");
 
         const isCacheValid =
-          cachedData && cacheTimestamp && Date.now() - cacheTimestamp < CACHE_EXPIRATION_TIME;
+          cachedData && 
+          cacheTimestamp && 
+          Date.now() - cacheTimestamp < CACHE_EXPIRATION_TIME;
 
         if (isCacheValid) {
           setArticles(JSON.parse(cachedData));
           setLoading(false);
         } else {
           const response = await fetch(
-            "https://medium2.p.rapidapi.com/user/2b99c617ee3a/articles", {
-              method: "GET",
-              headers: {
-                "X-Rapidapi-Key": "cb2c91cc4amsh0f8a46ceafe888bp196c35jsne2a6f1f9bfc7",
-                "X-Rapidapi-Host": "medium2.p.rapidapi.com",
-              },
-            }
+            "https://projects-database-d25a17e83152.herokuapp.com/api/articles/"
           );
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
           const data = await response.json();
-          const articleIDs = data.associated_articles;
 
-          // Fetch article details for each article
-          const articleDetailsPromises = articleIDs.map(async (id) => {
-            const articleResponse = await fetch(
-              `https://medium2.p.rapidapi.com/article/${id}`, {
-                method: "GET",
-                headers: {
-                  "X-Rapidapi-Key": "cb2c91cc4amsh0f8a46ceafe888bp196c35jsne2a6f1f9bfc7",
-                  "X-Rapidapi-Host": "medium2.p.rapidapi.com",
-                },
-              }
-            );
-            const articleData = await articleResponse.json();
-            return articleData;
-          });
-
-          const articles = await Promise.all(articleDetailsPromises);
-
-          localStorage.setItem("articles", JSON.stringify(articles));
+          localStorage.setItem("articles", JSON.stringify(data));
           localStorage.setItem("cacheTimestamp", Date.now().toString());
 
-          setArticles(articles);
+          setArticles(data);
           setLoading(false);
         }
       } catch (error) {
+        console.error("Fetch error:", error);
         setError(error.message);
         setLoading(false);
       }
@@ -67,7 +50,15 @@ const ArticleList = () => {
   }, []);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <Error />;
+  if (error) return <div>Error: {error}</div>;
+
+  if (articles.length === 0) {
+    return (
+      <div className="text-center text-gray-500 py-8">
+        No articles found.
+      </div>
+    );
+  }
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
